@@ -14,11 +14,18 @@ class ResultSummary extends StatelessWidget {
             (data) {
               return Row(
                 children: [
-                  Text(
-                    ((data['question_index'] as int) + 1).toString(),
-                    style: const TextStyle(
-                      fontSize: 20,
-                      backgroundColor: Colors.amber,
+                  Container(
+                    width: 20,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      ((data['question_index'] as int) + 1).toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                   Expanded(
@@ -28,14 +35,28 @@ class ResultSummary extends StatelessWidget {
                           data['question'] as String,
                           style: const TextStyle(
                             fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
-                          textAlign: TextAlign.left,
+                          maxLines: 2,
+                          textAlign: TextAlign.center,
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 14,
                         ),
-                        Text(data['chosen_answer'] as String),
-                        Text(data['correct_answer'] as String),
+                        Text(
+                          data['chosen_answer'] as String,
+                          style: const TextStyle(
+                            color: Colors.black54,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          data['correct_answer'] as String,
+                          style: const TextStyle(
+                            color: Colors.blue,
+                            fontSize: 18,
+                          ),
+                        ),
                       ],
                     ),
                   ),

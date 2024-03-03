@@ -2,7 +2,7 @@ import 'package:second_project/model/quiz_question.dart';
 
 const questions = [
   QuizQuestion(
-    'Apa penyabab pandemi Covid-19?',
+    'Apa penyebab pandemi Covid-19?',
     [
       'Virus',
       'Bakteri',

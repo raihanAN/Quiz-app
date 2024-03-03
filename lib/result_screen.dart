@@ -57,7 +57,7 @@ class ResultScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: resetQuiz,
               child: const Text('Reset Quiz'),
             ),
